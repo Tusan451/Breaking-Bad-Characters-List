@@ -11,7 +11,7 @@
         <!--Characters-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Breaking_Bad_Characters_List" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CharactersViewController" customModule="Breaking_Bad_Characters_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="character" rowHeight="80" id="OWF-3u-4on">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="character" rowHeight="80" id="OWF-3u-4on" customClass="CharacterTableViewCell" customModule="Breaking_Bad_Characters_List" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OWF-3u-4on" id="m0N-ju-35G">
@@ -55,6 +55,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="CharacterImage" destination="WXZ-er-9Rs" id="la0-8V-FHB"/>
+                                            <outlet property="name" destination="QRI-e6-Ucl" id="e6M-jv-SYW"/>
                                             <segue destination="Ao1-Te-A3y" kind="show" id="Pwq-Ye-h3L"/>
                                         </connections>
                                     </tableViewCell>
@@ -71,15 +73,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Characters" id="qxu-ua-xbP"/>
+                    <connections>
+                        <outlet property="table" destination="Uk2-HF-OJi" id="99x-hy-i9R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1071.2" y="69.715142428785612"/>
         </scene>
-        <!--View Controller-->
+        <!--Detailed View Controller-->
         <scene sceneID="IMi-EA-3lH">
             <objects>
-                <viewController id="Ao1-Te-A3y" sceneMemberID="viewController">
+                <viewController id="Ao1-Te-A3y" customClass="DetailedViewController" customModule="Breaking_Bad_Characters_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Lp-xG-avg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,6 +94,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LfD-G0-fX1" secondAttribute="height" multiplier="343:360" id="Umc-LP-4ZN"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEZ-rn-NYA">
                                 <rect key="frame" x="16" y="428" width="343" height="24"/>
