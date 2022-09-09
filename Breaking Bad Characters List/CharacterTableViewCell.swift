@@ -20,9 +20,7 @@ class CharacterTableViewCell: UITableViewCell {
         DispatchQueue.global().async {
             AF.download(character.img).validate().responseData { responce in
                 guard let data = responce.value else { return }
-                DispatchQueue.main.async {
-                    self.CharacterImage.image = UIImage(data: data)
-                }
+                self.CharacterImage.image = UIImage(data: data)
             }
         }
     }
