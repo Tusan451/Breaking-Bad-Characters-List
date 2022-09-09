@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class CharactersViewController: UIViewController {
 
     let cellId = "character"
     let urlString = "https://www.breakingbadapi.com/api/characters"
+    var searchResponce: [SearchResponce]? = nil
     
     @IBOutlet var table: UITableView!
     
@@ -22,6 +24,21 @@ class CharactersViewController: UIViewController {
     private func setupTable() {
         table.delegate = self
         table.dataSource = self
+        
+        fetchData()
+    }
+    
+    private func fetchData() {
+        guard let url = URL(string: urlString) else { return }
+        
+        AF.request(url).validate().responseDecodable(of: [SearchResponce].self) { responce in
+            switch responce.result {
+            case .success(let value):
+                print(value)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     /*
