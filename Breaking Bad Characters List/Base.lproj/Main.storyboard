@@ -124,6 +124,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kft-Qj-nMF">
+                                <rect key="frame" x="16" y="586.5" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="305-Fj-3xo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -133,9 +139,12 @@
                             <constraint firstItem="305-Fj-3xo" firstAttribute="trailing" secondItem="WlO-1o-ESQ" secondAttribute="trailing" constant="16" id="6TL-cp-p1E"/>
                             <constraint firstItem="LfD-G0-fX1" firstAttribute="leading" secondItem="305-Fj-3xo" secondAttribute="leading" constant="16" id="870-zi-zjq"/>
                             <constraint firstItem="AtJ-st-W4M" firstAttribute="top" secondItem="WlO-1o-ESQ" secondAttribute="bottom" constant="8" id="EB8-jM-ccy"/>
+                            <constraint firstItem="kft-Qj-nMF" firstAttribute="top" secondItem="AtJ-st-W4M" secondAttribute="bottom" constant="32" id="LWr-w1-726"/>
                             <constraint firstItem="305-Fj-3xo" firstAttribute="trailing" secondItem="LfD-G0-fX1" secondAttribute="trailing" constant="16" id="NyW-6J-3Eg"/>
                             <constraint firstItem="WlO-1o-ESQ" firstAttribute="leading" secondItem="305-Fj-3xo" secondAttribute="leading" constant="16" id="RHu-4L-1YF"/>
                             <constraint firstItem="wYp-dI-Cf5" firstAttribute="leading" secondItem="305-Fj-3xo" secondAttribute="leading" constant="16" id="VGD-W3-yz5"/>
+                            <constraint firstItem="305-Fj-3xo" firstAttribute="trailing" secondItem="kft-Qj-nMF" secondAttribute="trailing" constant="16" id="VGe-g3-i66"/>
+                            <constraint firstItem="kft-Qj-nMF" firstAttribute="leading" secondItem="305-Fj-3xo" secondAttribute="leading" constant="16" id="lBg-yw-DL7"/>
                             <constraint firstItem="LfD-G0-fX1" firstAttribute="top" secondItem="305-Fj-3xo" secondAttribute="top" id="m6n-rR-LNu"/>
                             <constraint firstItem="AtJ-st-W4M" firstAttribute="leading" secondItem="305-Fj-3xo" secondAttribute="leading" constant="16" id="oFz-OO-OOP"/>
                             <constraint firstItem="PEZ-rn-NYA" firstAttribute="leading" secondItem="305-Fj-3xo" secondAttribute="leading" constant="16" id="p57-xy-8Ld"/>
