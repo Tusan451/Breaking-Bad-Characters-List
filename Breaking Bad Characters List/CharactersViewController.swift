@@ -12,7 +12,7 @@ class CharactersViewController: UIViewController {
 
     let cellId = "character"
     let urlString = "https://www.breakingbadapi.com/api/characters"
-    var searchResponce: [SearchResponce]? = nil
+    var searchResponce: [SearchResponce] = []
     
     @IBOutlet var table: UITableView!
     
@@ -33,8 +33,21 @@ class CharactersViewController: UIViewController {
         
         AF.request(url).validate().responseDecodable(of: [SearchResponce].self) { responce in
             switch responce.result {
-            case .success(let value):
-                print(value)
+            case .success(let characters):
+                for characterValue in characters {
+                    let character = SearchResponce(name: characterValue.name,
+                                                   occupation: characterValue.occupation,
+                                                   img: characterValue.img,
+                                                   status: characterValue.status,
+                                                   nickname: characterValue.nickname)
+                    
+                    self.searchResponce.append(character)
+                }
+                
+                DispatchQueue.main.async {
+                    self.table.reloadData()
+                }
+                print(self.searchResponce)
             case .failure(let error):
                 print(error)
             }
