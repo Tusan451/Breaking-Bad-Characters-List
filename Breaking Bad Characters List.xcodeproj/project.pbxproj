@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AA24A02477BABB05F0CAAF2 /* Pods_Breaking_Bad_Characters_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E520E00DED81EAFA0E98681A /* Pods_Breaking_Bad_Characters_List.framework */; };
 		E0A574D228CB8A20002679C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A574D128CB8A20002679C7 /* AppDelegate.swift */; };
 		E0A574D428CB8A20002679C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A574D328CB8A20002679C7 /* SceneDelegate.swift */; };
 		E0A574D628CB8A20002679C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A574D528CB8A20002679C7 /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		E0A574DA28CB8A21002679C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0A574DD28CB8A21002679C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0A574DF28CB8A21002679C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E520E00DED81EAFA0E98681A /* Pods_Breaking_Bad_Characters_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breaking_Bad_Characters_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5426989721C8A7BF9875C9 /* Pods-Breaking Bad Characters List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breaking Bad Characters List.debug.xcconfig"; path = "Target Support Files/Pods-Breaking Bad Characters List/Pods-Breaking Bad Characters List.debug.xcconfig"; sourceTree = "<group>"; };
+		FAD3703D8F8D104314975447 /* Pods-Breaking Bad Characters List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breaking Bad Characters List.release.xcconfig"; path = "Target Support Files/Pods-Breaking Bad Characters List/Pods-Breaking Bad Characters List.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA24A02477BABB05F0CAAF2 /* Pods_Breaking_Bad_Characters_List.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DA3D7349D7CC8CA64D8326F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB5426989721C8A7BF9875C9 /* Pods-Breaking Bad Characters List.debug.xcconfig */,
+				FAD3703D8F8D104314975447 /* Pods-Breaking Bad Characters List.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B03DBD1BC3D05ABD1B06398A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E520E00DED81EAFA0E98681A /* Pods_Breaking_Bad_Characters_List.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E0A574C528CB8A20002679C7 = {
 			isa = PBXGroup;
 			children = (
 				E0A574D028CB8A20002679C7 /* Breaking Bad Characters List */,
 				E0A574CF28CB8A20002679C7 /* Products */,
+				8DA3D7349D7CC8CA64D8326F /* Pods */,
+				B03DBD1BC3D05ABD1B06398A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0A574E228CB8A21002679C7 /* Build configuration list for PBXNativeTarget "Breaking Bad Characters List" */;
 			buildPhases = (
+				D568730334F96B379EFF7A26 /* [CP] Check Pods Manifest.lock */,
 				E0A574CA28CB8A20002679C7 /* Sources */,
 				E0A574CB28CB8A20002679C7 /* Frameworks */,
 				E0A574CC28CB8A20002679C7 /* Resources */,
+				4276D76B6B3D78F737F67F68 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4276D76B6B3D78F737F67F68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breaking Bad Characters List/Pods-Breaking Bad Characters List-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breaking Bad Characters List/Pods-Breaking Bad Characters List-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Breaking Bad Characters List/Pods-Breaking Bad Characters List-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D568730334F96B379EFF7A26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Breaking Bad Characters List-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E0A574CA28CB8A20002679C7 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		E0A574E328CB8A21002679C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB5426989721C8A7BF9875C9 /* Pods-Breaking Bad Characters List.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		E0A574E428CB8A21002679C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAD3703D8F8D104314975447 /* Pods-Breaking Bad Characters List.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
