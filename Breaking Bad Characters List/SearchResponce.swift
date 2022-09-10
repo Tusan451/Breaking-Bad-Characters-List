@@ -21,4 +21,14 @@ struct SearchResponce: Codable {
         status = characterValue.status
         nickname = characterValue.nickname
     }
+    
+    static func getCharacters(from value: [SearchResponce]) -> [SearchResponce] {
+        
+        var characters: [SearchResponce] = []
+        for character in value {
+            let character = SearchResponce(for: character)
+            characters.append(character)
+        }
+        return characters
+    }
 }

@@ -35,10 +35,7 @@ class CharactersViewController: UIViewController {
         AF.request(url).validate().responseDecodable(of: [SearchResponce].self) { responce in
             switch responce.result {
             case .success(let characters):
-                for characterValue in characters {
-                    let character = SearchResponce(for: characterValue)
-                    self.searchResponce.append(character)
-                }
+                self.searchResponce = SearchResponce.getCharacters(from: characters)
                 DispatchQueue.main.async {
                     self.table.reloadData()
                 }
