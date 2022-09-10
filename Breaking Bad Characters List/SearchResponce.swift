@@ -13,4 +13,12 @@ struct SearchResponce: Codable {
     var img: String
     var status: String
     var nickname: String
+    
+    init(for characterValue: SearchResponce) {
+        name = characterValue.name
+        occupation = characterValue.occupation
+        img = characterValue.img
+        status = characterValue.status
+        nickname = characterValue.nickname
+    }
 }

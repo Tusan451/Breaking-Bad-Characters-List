@@ -29,25 +29,19 @@ class CharactersViewController: UIViewController {
     }
     
     private func fetchData() {
+        
         guard let url = URL(string: urlString) else { return }
         
         AF.request(url).validate().responseDecodable(of: [SearchResponce].self) { responce in
             switch responce.result {
             case .success(let characters):
                 for characterValue in characters {
-                    let character = SearchResponce(name: characterValue.name,
-                                                   occupation: characterValue.occupation,
-                                                   img: characterValue.img,
-                                                   status: characterValue.status,
-                                                   nickname: characterValue.nickname)
-                    
+                    let character = SearchResponce(for: characterValue)
                     self.searchResponce.append(character)
                 }
-                
                 DispatchQueue.main.async {
                     self.table.reloadData()
                 }
-                print(self.searchResponce)
             case .failure(let error):
                 print(error)
             }
