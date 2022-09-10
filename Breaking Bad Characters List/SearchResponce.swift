@@ -24,11 +24,13 @@ struct SearchResponce: Codable {
     
     static func getCharacters(from value: [SearchResponce]) -> [SearchResponce] {
         
-        var characters: [SearchResponce] = []
-        for character in value {
-            let character = SearchResponce(for: character)
-            characters.append(character)
-        }
-        return characters
+//        var characters: [SearchResponce] = []
+//        for character in value {
+//            let character = SearchResponce(for: character)
+//            characters.append(character)
+//        }
+//        return characters
+        
+        return value.compactMap { SearchResponce(for: $0) }
     }
 }
