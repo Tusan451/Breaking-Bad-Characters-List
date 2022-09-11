@@ -67,6 +67,60 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E075540428CE458A00DC5C4E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E0A574D128CB8A20002679C7 /* AppDelegate.swift */,
+				E0A574D328CB8A20002679C7 /* SceneDelegate.swift */,
+				E0A574DF28CB8A21002679C7 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E075540528CE459B00DC5C4E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E0A574DA28CB8A21002679C7 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E075540628CE45AB00DC5C4E /* Story boards */ = {
+			isa = PBXGroup;
+			children = (
+				E0A574D728CB8A20002679C7 /* Main.storyboard */,
+				E0A574DC28CB8A21002679C7 /* LaunchScreen.storyboard */,
+			);
+			path = "Story boards";
+			sourceTree = "<group>";
+		};
+		E075540728CE45C200DC5C4E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E075540828CE45D900DC5C4E /* Characters View Controller */,
+				E06C8DCB28CB921A00C101D1 /* DetailedViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E075540828CE45D900DC5C4E /* Characters View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E06C8DC928CB91EA00C101D1 /* CharactersViewController.swift */,
+				E06C8DCD28CB931B00C101D1 /* extension CharactersViewController table delegate & data source.swift */,
+			);
+			path = "Characters View Controller";
+			sourceTree = "<group>";
+		};
+		E075540928CE45F400DC5C4E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E06C8DCF28CB94ED00C101D1 /* CharacterTableViewCell.swift */,
+				E06C8DD128CB963300C101D1 /* SearchResponce.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E0A574C528CB8A20002679C7 = {
 			isa = PBXGroup;
 			children = (
@@ -88,17 +142,11 @@
 		E0A574D028CB8A20002679C7 /* Breaking Bad Characters List */ = {
 			isa = PBXGroup;
 			children = (
-				E0A574D128CB8A20002679C7 /* AppDelegate.swift */,
-				E0A574D328CB8A20002679C7 /* SceneDelegate.swift */,
-				E0A574D728CB8A20002679C7 /* Main.storyboard */,
-				E0A574DA28CB8A21002679C7 /* Assets.xcassets */,
-				E0A574DC28CB8A21002679C7 /* LaunchScreen.storyboard */,
-				E0A574DF28CB8A21002679C7 /* Info.plist */,
-				E06C8DC928CB91EA00C101D1 /* CharactersViewController.swift */,
-				E06C8DCB28CB921A00C101D1 /* DetailedViewController.swift */,
-				E06C8DCD28CB931B00C101D1 /* extension CharactersViewController table delegate & data source.swift */,
-				E06C8DCF28CB94ED00C101D1 /* CharacterTableViewCell.swift */,
-				E06C8DD128CB963300C101D1 /* SearchResponce.swift */,
+				E075540428CE458A00DC5C4E /* App */,
+				E075540628CE45AB00DC5C4E /* Story boards */,
+				E075540528CE459B00DC5C4E /* Resources */,
+				E075540728CE45C200DC5C4E /* View Controllers */,
+				E075540928CE45F400DC5C4E /* Models */,
 			);
 			path = "Breaking Bad Characters List";
 			sourceTree = "<group>";
@@ -376,7 +424,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 34J2M9FNPA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Breaking Bad Characters List/Info.plist";
+				INFOPLIST_FILE = "Breaking Bad Characters List/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -405,7 +453,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 34J2M9FNPA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Breaking Bad Characters List/Info.plist";
+				INFOPLIST_FILE = "Breaking Bad Characters List/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
